@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折叠插件（二）</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div style="width: 1200px; margin: auto; margin-top: 50px;">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                    href="#collapseexample">
+                    点击我进行展开，再次点击我进行折叠。--shown 事件
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseexample" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                    cred nesciunt sapiente ea proident.
+                    Ad vegan excepteur butcher vice lomo.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(function () {
+    $('#collapseexample').on('show.bs.collapse', function () {
+        alert('嘿，当您展开时会提示本警告');
+    });
+    $('#collapseexample').on('shown.bs.collapse', function () {
+        alert('嘿，伙计，我们又见面了');
+    });
+});
+</script>
+</div>
+</body>
+</html>
