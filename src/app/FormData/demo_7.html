@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>FormData</title>
+    <link rel="icon" type="image/png" href="/SkillsTrainCamp/src/static/images/favicon.png">
+</head>
+<body>
+
+<script>
+    //通过FormData构造函数创建一个空对象
+    var formdata=new FormData();
+    //通过append()方法在末尾追加key为name值为laoliu的数据
+    formdata.append("name","laoliu");
+    console.log(formdata.get("name"));//laoliu
+    //删除key为name的值
+    formdata.delete("name");
+    console.log(formdata.get("name"));//null
+</script>
+</body>
+</html>
