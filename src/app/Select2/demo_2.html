@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select2</title>
+    <link rel="icon" type="image/png" href="/SkillsTrainCamp/src/static/images/favicon.png">
+    <link rel="stylesheet" href="/SkillsTrainCamp/src/static/select2-4.0.12/css/select2.css">
+
+    <script src="/SkillsTrainCamp/src/static/jquery-1.10.2/jquery.js"></script>
+    <script src="/SkillsTrainCamp/src/static/select2-4.0.12/js/select2.js"></script>
+</head>
+<body>
+    <div style="width: 75%; margin: 125px auto;">
+        <h4>单选</h4>
+        <select class="basic-single" name="state" style="width: 250px;">
+            <option></option>
+            <option value="1">AAA</option>
+            <option value="2">BBB</option>
+            <option value="3">CCC</option>
+            <option value="4">DDD</option>
+            <option value="5">EEE</option>
+            <option value="6">FFF</option>
+        </select>
+    </div>
+
+<script>
+    $(document).ready(function () {
+        $('.basic-single').select2({
+            placeholder: "Select a state",
+            allowClear: true
+        });
+    });
+</script>
+</body>
+</html>

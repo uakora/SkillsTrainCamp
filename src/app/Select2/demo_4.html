@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select2</title>
+    <link rel="icon" type="image/png" href="/SkillsTrainCamp/src/static/images/favicon.png">
+    <link rel="stylesheet" href="/SkillsTrainCamp/src/static/select2-4.0.12/css/select2.css">
+
+    <script src="/SkillsTrainCamp/src/static/jquery-1.10.2/jquery.js"></script>
+    <script src="/SkillsTrainCamp/src/static/select2-4.0.12/js/select2.js"></script>
+</head>
+<body>
+    <div style="width: 75%; margin: 125px auto;">
+        <h4>单选(closeOnSelect=false)</h4>
+        <select class="basic-single" name="state" style="width: 500px;"></select>
+        <h4>单选(closeOnSelect=true)</h4>
+        <select class="basic-single2" name="state2" style="width: 500px;"></select>
+        <h4>多选(closeOnSelect=false)</h4>
+        <select class="basic-multiple" name="states[]" multiple="multiple" style="width: 500px;"></select>
+        <h4>多选(closeOnSelect=true)</h4>
+        <select class="basic-multiple2" name="states2[]" multiple="multiple" style="width: 500px;"></select>
+    </div>
+
+<script>
+    $(document).ready(function () {
+        var dataSrc = [
+            {id: 0, text: 'enhancement'},
+            {id: 1, text: 'bug'},
+            {id: 2, text: 'duplicate'},
+            {id: 3, text: 'invalid'},
+            {id: 4, text: 'wontfix'}
+        ];
+        $('.basic-single').select2({
+            data: dataSrc,
+            closeOnSelect: false
+        });
+        $('.basic-single2').select2({
+            data: dataSrc,
+            closeOnSelect: true
+        });
+        $('.basic-multiple').select2({
+            placeholder: "Select a state",
+            allowClear: true,
+            closeOnSelect: false,
+            data: dataSrc
+        });
+        $('.basic-multiple2').select2({
+            placeholder: "Select a state",
+            allowClear: true,
+            closeOnSelect: true,
+            data: dataSrc
+        });
+    });
+</script>
+</body>
+</html>
