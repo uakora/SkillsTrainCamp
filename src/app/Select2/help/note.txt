@@ -1,0 +1,2 @@
+allowClear： 是否显示清楚按钮，默认false，如果设置为true，需要同时配置placeholder，否则可能会引起js报错：TypeError: Cannot read property 'id' of undefined
+

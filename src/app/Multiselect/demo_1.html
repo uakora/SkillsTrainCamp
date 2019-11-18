@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Multiselect</title>
+
+    <link rel="stylesheet" href="/SkillsTrainCamp/src/static/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="/SkillsTrainCamp/src/static/bootstrap-multiselect/css/bootstrap-multiselect.css">
+    <script src="/SkillsTrainCamp/src/static/jquery-1.10.2/jquery.js"></script>
+    <script src="/SkillsTrainCamp/src/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+    <script src="/SkillsTrainCamp/src/static/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+</head>
+<body>
+<div class="container" style="margin-top: 100px;">
+    <select id="example-getting-started" multiple="multiple">
+        <option value="cheese">Cheese</option>
+        <option value="tomatoes">Tomatoes</option>
+        <option value="mozarella">Mozzarella</option>
+        <option value="mushrooms">Mushrooms</option>
+        <option value="pepperoni">Pepperoni</option>
+        <option value="onions">Onions</option>
+    </select>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
+    });
+</script>
+</body>
+</html>
