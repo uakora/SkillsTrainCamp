@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select2</title>
+    <link rel="icon" type="image/png" href="/SkillsTrainCamp/src/static/images/favicon.png">
+    <link rel="stylesheet" href="/SkillsTrainCamp/src/static/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/SkillsTrainCamp/src/static/select2-4.0.12/css/select2.css">
+
+    <script src="/SkillsTrainCamp/src/static/jquery-1.10.2/jquery.js"></script>
+    <script src="/SkillsTrainCamp/src/static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="/SkillsTrainCamp/src/static/select2-4.0.12/js/select2.js"></script>
+    <script src="/SkillsTrainCamp/src/static/select2-4.0.12/js/i18n/zh-CN.js"></script>
+
+    <style>
+        .select2-selection--multiple {
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container" style="margin-top: 52px;">
+        <button id="btn_modal" class="btn btn-success" type="button">模态框中的select2</button>
+    </div>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <select id="basic_multiple"></select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">提交更改</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+<script>
+    $(document).ready(function () {
+        var dataSrc2 = [
+            {'id': 'zwx003', 'text': '张三', 'pinyin': 'zhangsan'}, {'id': 'lwx004', 'text': '李四', 'pinyin': 'lisi'}, {'id': 'wwx005', 'text': '王五', 'pinyin': 'wangwu'},
+            {'id': 'xwx006', 'text': '谢六', 'pinyin': 'xieliu'}, {'id': 'mwx007', 'text': '马七', 'pinyin': 'mangqi'}, {'id': 'mwx008', 'text': '陈八', 'pinyin': 'chenba'},
+            {'id': 'lwx009', 'text': '老九', 'pinyin': 'laojiu'}, {'id': 'wx_1', 'text': 'AAAA'}, {'id': 'wx_1', 'text': 'AABB'},
+            {'id': 'wx_2', 'text': 'AACC'}, {'id': 'wx_3', 'text': 'AADD'}, {'id': 'wx_4', 'text': 'AAEE'},
+            {'id': 'wx_5', 'text': 'BBBB'}, {'id': 'wx_6', 'text': 'BBCC'}, {'id': 'wx_7', 'text': 'BBDD'},
+            {'id': 'wx_8', 'text': 'BBEE'}, {'id': 'wx_9', 'text': 'BBFF'}, {'id': 'wx_10', 'text': 'CCCC'},
+            {'id': 'wx_11', 'text': 'CCDD'}, {'id': 'wx_12', 'text': 'CCEE'}, {'id': 'wx_13', 'text': 'CCFF'},
+            {'id': 'wx_14', 'text': 'CCGG'}, {'id': 'wx_15', 'text': 'DDDD'}, {'id': 'wx_16', 'text': 'DDEE'}
+        ];
+        var dataSrc = [
+            {'id': 'zwx003', 'text': '张三', 'pinyin': 'zhangsan'}, {'id': 'lwx004', 'text': '李四', 'pinyin': 'lisi'},
+            {'id': 'wwx005', 'text': '王五', 'pinyin': 'wangwu'}, {'id': 'xwx006', 'text': '谢六', 'pinyin': 'xieliu'},
+            {'id': 'mwx007', 'text': '马七', 'pinyin': 'mangqi'}, {'id': 'mwx008', 'text': '陈八', 'pinyin': 'chenba'},
+            {'id': 'lwx009', 'text': '老九', 'pinyin': 'laojiu'}
+        ];
+        $('#basic_multiple').select2({
+            'language': 'zh-CN',
+            'placeholder': '请选择...',
+            'width': '100%',
+            'height': 120,
+            'allowClear': false,
+            // 'maximumSelectionLength': 3,
+            'multiple': true,
+            'dropdownParent': $('#myModal'),            
+            'paginate': {
+                'more': true
+            },
+            'data': dataSrc,
+            'matcher': function (params, data) {
+                console.log(data);
+                // If there are no search terms, return all of the data
+                if ($.trim(params.term) === '') {
+                  return data;
+                }
+
+                // Do not display the item if there is no 'text' property
+                if (typeof data.text === 'undefined') {
+                  return null;
+                }
+
+                // `params.term` should be the term that is used for searching
+                // `data.text` is the text that is displayed for the data object
+                if (data.text.indexOf(params.term) > -1 || data.pinyin.indexOf(params.term) > -1) {
+                  var modifiedData = $.extend({}, data, true);
+                  // modifiedData.text += ' (matched)';
+
+                  // You can return modified objects from here
+                  // This includes matching the `children` how you want in nested data sets
+                  return modifiedData;
+                }
+
+                // Return `null` if the term should not be displayed
+                return null;
+            }
+        });
+
+        $('#btn_modal').click(function () {
+            $('#myModal').modal('show');
+        });
+        $('#myModal').on('shown.bs.modal', function () {
+            // $('#basic_multiple').val(['lwx004', 'lwx009', 'wx_12', 'wx_15']).trigger('change');
+            $('#basic_multiple').val(['lwx004']).trigger('change');
+        });
+        $('#myModal').on('hide.bs.modal', function () {
+            $('#basic_multiple').val(null).trigger('change');
+        });
+
+    });
+
+</script>
+</body>
+</html>
