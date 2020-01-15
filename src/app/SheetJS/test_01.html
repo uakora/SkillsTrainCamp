@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SheetJS</title>
+		<script src="../../static/sheetjs/xlsx.full.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<button id="btn_export" type="button">导出</button>
+		</div>
+		
+		<script type="text/javascript">
+			console.log('version: ', XLSX.version);
+			let btn = document.querySelector('#btn_export');
+			btn.addEventListener('click', function() {
+				let filename = "MR同步详细.xlsx";
+				let header = ['id', 'name', 'age'];
+				let data = [
+					{'id':1,'name':'张三','age':18},
+					{'id':2,'name':'李四','age':16},
+					{'id':'3','name':'王天霸','age':20}
+				];				
+				let wb = XLSX.utils.book_new();
+				let ws_name = "第一个Sheet";
+				let ws = XLSX.utils.json_to_sheet(data, {
+					'header': header,
+					'skipHeader': true
+				});
+				XLSX.utils.book_append_sheet(wb, ws, ws_name);
+				XLSX.writeFile(wb, filename);
+			});
+		</script>
+	</body>
+</html>
