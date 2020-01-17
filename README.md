@@ -42,3 +42,5 @@ DT导出功能
             });
             mr_table.buttons().container().appendTo($("#btn-export"));
         }
+
+https://developers.google.com/web/tools/chrome-devtools/network/reference#timing-explanation
