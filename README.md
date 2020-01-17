@@ -44,3 +44,16 @@ DT导出功能
         }
 
 https://developers.google.com/web/tools/chrome-devtools/network/reference#timing-explanation
+
+postCSSS
+
+threeShake(树摇)
+
+应用打包webpack
+
+库打包 Rollup
+
+ES Module
+CSS var
+LitElement
+webcomponent
