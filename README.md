@@ -60,3 +60,5 @@ CSS var
 LitElement
 
 webcomponent
+
+lighthouse
