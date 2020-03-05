@@ -1,0 +1,8 @@
+{
+    "rows": [
+        {"id": "2", "nb": "A", "desc": "xxx", "mo": "", "param": "", "value": "", "children": []},
+        {"id": "3", "nb": "B", "desc": "xxx", "mo": "MO_B1", "param": "", "value": "", "children": []},
+        {"id": "4", "nb": "C", "desc": "xxx", "mo": "MO_C1", "param": "MO_C1_P1", "value": "", "children": []},
+        {"id": "4", "nb": "C", "desc": "xxx", "mo": "MO_C1", "param": "MO_C1_P1", "value": "", "children": []}
+    ]
+}
