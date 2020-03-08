@@ -1,8 +1,379 @@
 {
+    "total": 8,
     "rows": [
-        {"id": "2", "nb": "A", "desc": "xxx", "mo": "", "param": "", "value": "", "children": []},
-        {"id": "3", "nb": "B", "desc": "xxx", "mo": "MO_B1", "param": "", "value": "", "children": []},
-        {"id": "4", "nb": "C", "desc": "xxx", "mo": "MO_C1", "param": "MO_C1_P1", "value": "", "children": []},
-        {"id": "4", "nb": "C", "desc": "xxx", "mo": "MO_C1", "param": "MO_C1_P1", "value": "", "children": []}
+        {
+            "id": "lv1.2",
+            "name": "A",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "",
+            "KEY": "",
+            "param": "",
+            "value": "",
+            "children": []
+        },
+        {
+            "id": "lv1.3",
+            "name": "B",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "B-FD-MO",
+            "KEY": "",
+            "param": "",
+            "value": "",
+            "children": []
+        },
+        {
+            "id": "lv1.4",
+            "name": "C",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "C-FD-MO",
+            "KEY": "C-FD-MOK",
+            "param": "",
+            "value": "",
+            "children": []
+        },
+        {
+            "id": "lv1.5",
+            "name": "D",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "D-FD-MO",
+            "KEY": "D-FD-MOK",
+            "param": "D-FD-MO-P",
+            "value": "",
+            "children": []
+        },
+        {
+            "id": "lv1.6",
+            "name": "E",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "E-FD-MO",
+            "KEY": "E-FD-MOK",
+            "param": "E-FD-MO-P",
+            "value": "E-FD-MO-PV",
+            "children": []
+        },
+        {
+            "id": "lv1.8.9",
+            "name": "F",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "",
+            "KEY": "",
+            "param": "",
+            "value": "",
+            "state": "closed",
+            "children": [
+                {
+                    "id": "lv2.8.9",
+                    "fd": "不涉及",
+                    "MO": "F-FD-MO",
+                    "state": "closed",
+                    "children": [
+                        {
+                            "id": "lv3.8.9",
+                            "fd": "",
+                            "MO": "F-FD-MO",
+                            "KEY": "F-FD-MOK",
+                            "param": "F-FD-MO-P1,F-FD-MO-P2",
+                            "value": "",
+                            "state": "closed",
+                            "children": [
+                                {
+                                    "id": "lv4.8",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "F-FD-MO-P1",
+                                    "value": ""
+                                },
+                                {
+                                    "id": "lv4.8",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "F-FD-MO-P2",
+                                    "value": "F-FD-MO-P2V"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lv1.11.12.13.14.15.17.18.19.20",
+            "name": "G",
+            "desc": "特性描述",
+            "fd": "不涉及",
+            "MO": "",
+            "KEY": "",
+            "param": "",
+            "value": "",
+            "state": "closed",
+            "children": [
+                {
+                    "id": "lv2.11.12.13.14.15.17.18.19.20",
+                    "fd": "不涉及",
+                    "MO": "G-FD-MO1,G-FD-MO2,G-FD-MO3,G-FD-MO5,G-FD-MO6,G-FD-MO7,G-FD-MO8",
+                    "state": "closed",
+                    "children": [
+                        {
+                            "id": "lv3.11",
+                            "fd": "",
+                            "MO": "G-FD-MO1",
+                            "KEY": "",
+                            "param": "",
+                            "value": "",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.12",
+                            "fd": "",
+                            "MO": "G-FD-MO2",
+                            "KEY": "G-FD-MO2K",
+                            "param": "",
+                            "value": "",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.13",
+                            "fd": "",
+                            "MO": "G-FD-MO3",
+                            "KEY": "",
+                            "param": "G-FD-MO4-P",
+                            "value": "G-FD-MO4-PV",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.15",
+                            "fd": "",
+                            "MO": "G-FD-MO5",
+                            "KEY": "G-FD-MO5K",
+                            "param": "G-FD-MO5-P",
+                            "value": "",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.16",
+                            "fd": "",
+                            "MO": "G-FD-MO6",
+                            "KEY": "G-FD-MO6K",
+                            "param": "G-FD-MO6-P",
+                            "value": "G-FD-MO6-PV",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.17.18",
+                            "fd": "",
+                            "MO": "G-FD-MO7",
+                            "KEY": "",
+                            "param": "G-FD-MO7-P1,G-FD-MO7-P2",
+                            "value": "",
+                            "state": "closed",
+                            "children": [
+                                {
+                                    "id": "lv4.17",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "G-FD-MO7-P1",
+                                    "value": ""
+                                },
+                                {
+                                    "id": "lv4.18",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "G-FD-MO7-P2",
+                                    "value": "G-FD-MO7-P2V"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "lv3.19.20",
+                            "fd": "",
+                            "MO": "G-FD-MO8",
+                            "KEY": "G-FD-MO8K",
+                            "param": "G-FD-MO8-P1,G-FD-MO8-P2",
+                            "value": "",
+                            "state": "closed",
+                            "children": [
+                                {
+                                    "id": "lv4.19",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "G-FD-MO8-P1",
+                                    "value": ""
+                                },
+                                {
+                                    "id": "lv4.20",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "G-FD-MO8-P2",
+                                    "value": "G-FD-MO8-P2V"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lv1.22.23.24.25.26.27.28.29.30.31.32.33",
+            "name": "H",
+            "desc": "特性描述",
+            "fd": "H-FD1,H-FD2,H-FD3,H-FD4,H-FD5,H-FD6,H-FD7",
+            "MO": "",
+            "KEY": "",
+            "param": "",
+            "value": "",
+            "state": "closed",
+            "children": [
+                {
+                    "id": "lv2.22",
+                    "fd": "H-FD1",
+                    "MO": "",
+                    "KEY": "",
+                    "param": "",
+                    "value": "",
+                    "children": []
+                },
+                {
+                    "id": "lv2.23",
+                    "fd": "H-FD2",
+                    "MO": "H-FD2-MO",
+                    "KEY": "",
+                    "param": "",
+                    "value": "",
+                    "children": []
+                },
+                {
+                    "id": "lv2.24",
+                    "fd": "H-FD3",
+                    "MO": "H-FD3-MO",
+                    "KEY": "H-FD3-MOK",
+                    "param": "",
+                    "value": "",
+                    "children": []
+                },
+                {
+                    "id": "lv2.25",
+                    "fd": "H-FD4",
+                    "MO": "H-FD4-MO",
+                    "KEY": "H-FD4-MOK",
+                    "param": "H-FD4-MO-P",
+                    "value": "",
+                    "children": []
+                },
+                {
+                    "id": "lv2.26",
+                    "fd": "H-FD5",
+                    "MO": "H-FD5-MO",
+                    "KEY": "H-FD5-MOK",
+                    "param": "H-FD5-MO-P",
+                    "value": "H-FD5-MO-PV",
+                    "children": []
+                },
+                {
+                    "id": "lv2.27.28",
+                    "fd": "H-FD6",
+                    "MO": "H-FD6-MO",
+                    "KEY": "",
+                    "param": "",
+                    "value": "",
+                    "state": "closed",
+                    "children": [
+                        {
+                            "id": "lv3.27.28",
+                            "fd": "",
+                            "MO": "H-FD6-MO",
+                            "KEY": "H-FD6-MOK",
+                            "param": "H-FD6-MO-P1,H-FD6-MO-P2",
+                            "value": "",
+                            "state": "closed",
+                            "children": [
+                                {
+                                    "id": "lv4.27",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "H-FD6-MO-P1",
+                                    "value": ""
+                                },
+                                {
+                                    "id": "lv4.28",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "H-FD6-MO-P2",
+                                    "value": "H-FD6-MO-P2V"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "lv2.29.30.31.32.33",
+                    "fd": "H-FD7",
+                    "MO": "H-FD7-MO1,H-FD7-MO2,H-FD7-MO3,H-FD7-MO4",
+                    "KEY": "",
+                    "param": "",
+                    "value": "",
+                    "state": "closed",
+                    "children": [
+                        {
+                            "id": "lv3.29",
+                            "fd": "",
+                            "MO": "H-FD7-MO1",
+                            "KEY": "",
+                            "param": "",
+                            "value": "",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.30",
+                            "fd": "",
+                            "MO": "H-FD7-MO2",
+                            "KEY": "H-FD7-MO2K",
+                            "param": "",
+                            "value": "",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.31",
+                            "fd": "",
+                            "MO": "H-FD7-MO3",
+                            "KEY": "H-FD7-MO3K",
+                            "param": "H-FD7-MO3-P",
+                            "value": "",
+                            "children": []
+                        },
+                        {
+                            "id": "lv3.32.33",
+                            "fd": "",
+                            "MO": "H-FD7-MO4",
+                            "KEY": "H-FD7-MO4K",
+                            "param": "H-FD7-MO4-P1,H-FD7-MO4-P2",
+                            "value": "",
+                            "state": "closed",
+                            "children": [
+                                {
+                                    "id": "lv4.32",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "H-FD7-MO4-P1",
+                                    "value": ""
+                                },
+                                {
+                                    "id": "lv4.33",
+                                    "fd": "",
+                                    "MO": "",
+                                    "param": "H-FD7-MO4-P2",
+                                    "value": "H-FD7-MO4-P2V"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
