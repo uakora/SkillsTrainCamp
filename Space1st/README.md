@@ -1,2 +1,2 @@
 # SkillsTrainRoom
-a repository for skills training
+script标签直接引入
