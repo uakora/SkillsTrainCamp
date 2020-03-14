@@ -1,1 +1,1 @@
-strain camp
+train camp
