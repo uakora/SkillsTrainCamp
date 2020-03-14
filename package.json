@@ -1,7 +1,7 @@
 {
   "name": "SkillsTrainCamp",
   "version": "1.0.0",
-  "description": "train camp",
+  "description": "skills train camp",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
