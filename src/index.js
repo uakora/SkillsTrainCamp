@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import cat from './cat.jpg';
+import XmlData from './xmldata.xml';
 
 
 function component() {
@@ -14,6 +15,8 @@ function component() {
     catIcon.height = 150;   
 
     element.appendChild(catIcon);
+
+    console.log('xml: ', XmlData);
 
     return element;
     
