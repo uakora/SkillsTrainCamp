@@ -1,3 +1,7 @@
+body {
+    background: url(./bg.jpg);
+}
 .hello {
     color: red;
+    
 }
