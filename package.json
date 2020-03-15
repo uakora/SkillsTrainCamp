@@ -1,5 +1,5 @@
 {
-  "name": "SkillsTrainCamp",
+  "name": "skillstraincamp",
   "version": "1.0.0",
   "description": "**train camp**",
   "private": true,
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/uakora/SkillsTrainCamp#readme",
   "dependencies": {
     "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3"
   }
 }
