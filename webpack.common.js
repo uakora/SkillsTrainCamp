@@ -5,7 +5,8 @@ const webpack = require('webpack');
 
 module.exports = {  
     entry: {
-        app: './src/index.js'
+        app: './src/index.js',
+        another: './src/another.js'
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -26,5 +27,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     }
+
 };
